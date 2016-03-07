@@ -1,0 +1,19 @@
+{
+  "name": "nia-redux",
+  "homepage": "https://github.com/ronaldchacon/nia-redux",
+  "authors": [
+    "Ronald Chacon <ronald.chacon87@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ]
+}
