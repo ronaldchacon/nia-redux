@@ -1,4 +1,5 @@
 $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+@import "base/bootstrap_overrides";
 @import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "base/framework_and_overrides";
