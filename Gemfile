@@ -10,6 +10,7 @@ gem "jquery-rails"
 gem "turbolinks"
 gem "figaro"
 gem "jquery-turbolinks", "~> 2.1"
+gem "haml-rails", "~> 0.9.0"
 
 group :development, :test do
   gem "byebug"
