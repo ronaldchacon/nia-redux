@@ -9,6 +9,7 @@ gem "coffee-rails", "~> 4.1.0"
 gem "jquery-rails"
 gem "turbolinks"
 gem "figaro"
+gem "jquery-turbolinks", "~> 2.1"
 
 group :development, :test do
   gem "byebug"
