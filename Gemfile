@@ -20,6 +20,13 @@ end
 group :development do
   gem "web-console", "~> 2.0"
   gem "spring"
+  gem "better_errors", "~> 2.1", ">= 2.1.1"
+  gem "binding_of_caller", "~> 0.7.2"
+  gem "annotate", "~> 2.7"
+  gem "pry-rails", "~> 0.3.4"
+  gem "pry-byebug", "~> 3.3"
+  gem "rails-footnotes", "~> 4.0"
+  gem "quiet_assets", "~> 1.1"
 end
 
 group :test do
