@@ -108,6 +108,9 @@ GEM
       nokogiri (~> 1.6.0)
       ruby_parser (~> 3.5)
     htmlentities (4.3.4)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jquery-rails (4.1.0)
       rails-dom-testing (~> 1.0)
@@ -128,6 +131,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    multi_xml (0.5.5)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
@@ -261,6 +265,7 @@ DEPENDENCIES
   faker (~> 1.6, >= 1.6.3)
   figaro
   haml-rails (~> 0.9.0)
+  httparty (~> 0.13.7)
   jquery-rails
   jquery-turbolinks (~> 2.1)
   launchy (~> 2.4, >= 2.4.3)
