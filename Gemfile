@@ -12,6 +12,8 @@ gem "figaro"
 gem "jquery-turbolinks", "~> 2.1"
 gem "haml-rails", "~> 0.9.0"
 gem "devise", "~> 3.5", ">= 3.5.6"
+gem "rolify", "~> 5.0"
+gem "pundit", "~> 1.1"
 
 group :development, :test do
   gem "byebug"
