@@ -23,4 +23,22 @@ class CanistreamitSearch
       raise response.response
     end
   end
+
+  def search_and_query(movie_name)
+    results = {}
+    response = self.class.get("/search", query: { movieName: movie_name })
+
+    if response.success?
+      response.each do |m|
+        results[m["title"]] = m
+        stream = {}
+        stream["availability"] = movie(m["_id"])
+        results[m["title"]].update(stream["availability"])
+      end
+    else
+      raise response.response
+    end
+
+    results
+  end
 end
