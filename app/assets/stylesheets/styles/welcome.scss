@@ -1,3 +1,15 @@
+#search {
+  padding: 40px 0;
+  .input-group {
+    input[type="search"] {
+      height: 60px;
+    }
+    button {
+      height: 60px;
+    }
+  }
+}
+
 .movie {
   padding: 20px 0;
 }

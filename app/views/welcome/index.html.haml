@@ -1,7 +1,12 @@
 .container
-  = form_tag "/welcome", method: :get do
-    = search_field_tag "movie_name", nil, placeholder: "Enter Movie Name"
-    = submit_tag "Search"
+  %section#search
+    .row
+      .col-md-6.col-md-offset-3
+        = form_tag "/welcome", method: :get do
+          .input-group
+            = search_field_tag "movie_name", nil, placeholder: "Enter Movie Name", class: "form-control"
+            %span.input-group-btn
+              = button_tag "Search", class: "btn btn-primary", type: "submit"
 
   %section#search-results
     - @results.each do |movies|
@@ -20,6 +25,6 @@
               = link_to "Rotten Tomatoes", movie["rottentomatoes"]
               <span>Available On: </span>
               - unless movie["netflix_instant"] == nil
-                = link_to "NetFlix", movie["netflix_instant"]["direct_url"]
+                = link_to "NetFlix", movie["netflix_instant"]["direct_url"], target: "_blank"
               - unless movie["hulu_movies"] == nil
-                = link_to "Hulu", movie["hulu_movies"]["direct_url"]
+                = link_to "Hulu", movie["hulu_movies"]["direct_url"], target: "_blank"
