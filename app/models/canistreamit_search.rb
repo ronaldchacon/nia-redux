@@ -12,7 +12,7 @@ class CanistreamitSearch
     end
   end
 
-  def movie(movie_id)
+  def query(movie_id)
     response = self.class.get("/query", query: { movieId: movie_id,
                                                  attributes: "1",
                                                  mediaType: "streaming"
@@ -25,20 +25,17 @@ class CanistreamitSearch
   end
 
   def search_and_query(movie_name)
-    results = {}
-    response = self.class.get("/search", query: { movieName: movie_name })
+    response = search(movie_name)
 
     if response.success?
-      response.each do |m|
-        results[m["title"]] = m
-        stream = {}
-        stream["availability"] = movie(m["_id"])
-        results[m["title"]].update(stream["availability"])
+      response.map do |movie|
+        {
+          movie: movie,
+          availability: query(movie["_id"])
+        }
       end
     else
       raise response.response
     end
-
-    results
   end
 end
