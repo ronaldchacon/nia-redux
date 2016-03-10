@@ -9,22 +9,3 @@
               = button_tag "Search", class: "btn btn-primary", type: "submit"
 
   %section#search-results
-    - @results.each do |movies|
-      - movies.each do |movie|
-        - next unless movie.is_a?(Hash)
-        .row.movie
-          .col-md-2
-            = image_tag "#{movie["image"]}", style: "width:144px; height:217px;"
-          .col-md-10
-            %h2
-              #{movie["title"]}
-              <small>#{movie["year"]}</small>
-            %p= movie["description"] == "" ? "No description available" : movie["description"]
-            %nav
-              = link_to "IMDB", movie["imdb"]
-              = link_to "Rotten Tomatoes", movie["rottentomatoes"]
-              <span>Available On: </span>
-              - unless movie["netflix_instant"] == nil
-                = link_to "NetFlix", movie["netflix_instant"]["direct_url"], target: "_blank"
-              - unless movie["hulu_movies"] == nil
-                = link_to "Hulu", movie["hulu_movies"]["direct_url"], target: "_blank"
