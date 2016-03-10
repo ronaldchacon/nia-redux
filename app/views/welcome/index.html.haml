@@ -2,7 +2,7 @@
   %section#search
     .row
       .col-md-6.col-md-offset-3
-        = form_tag "/welcome", method: :get do
+        = form_tag "/welcome", method: :get, remote: true do
           .input-group
             = search_field_tag "movie_name", nil, placeholder: "Enter Movie Name", class: "form-control"
             %span.input-group-btn
